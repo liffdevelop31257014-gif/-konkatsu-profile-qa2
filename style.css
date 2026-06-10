@@ -105,67 +105,55 @@ label:has(input[type="radio"]){
  ********************************/
 
 .ranking-group{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  margin-top:12px;
+  margin-top:8px;
 }
 
 .rank-option{
-  width:100%;
   display:flex;
   align-items:center;
-  gap:12px;
 
-  padding:14px 16px;
+  gap:10px;
 
-  border:2px solid #f0c5cc;
-  border-radius:14px;
+  padding:8px 0;
 
-  background:#fff;
+  background:none;
+  border:none;
 
-  font-size:15px;
+  width:100%;
+
   text-align:left;
+  font-size:15px;
 
   cursor:pointer;
-
-  transition:.2s;
-}
-
-.rank-option:hover{
-  background:#fff8f9;
-}
-
-.rank-option.selected{
-  background:#fff0f3;
-  border-color:#f48ca0;
 }
 
 .rank-number{
-  width:32px;
-  height:32px;
+  width:24px;
+  height:24px;
 
   border-radius:50%;
 
-  background:#f48ca0;
-  color:#fff;
+  border:2px solid #f0c5cc;
+
+  background:#fff;
+
+  color:transparent;
 
   display:flex;
   align-items:center;
   justify-content:center;
 
-  font-size:14px;
+  font-size:12px;
   font-weight:700;
 
   flex-shrink:0;
-
-  visibility:hidden;
 }
 
 .rank-option.selected .rank-number{
-  visibility:visible;
+  background:#f48ca0;
+  border-color:#f48ca0;
+  color:#fff;
 }
-
 /********************************
  * ボタン
  ********************************/
