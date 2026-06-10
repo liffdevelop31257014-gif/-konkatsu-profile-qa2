@@ -4,87 +4,267 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>婚活自己開示QA Part2</title>
+
 <link rel="stylesheet" href="style.css"/>
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </head>
+
 <body>
+
 <div class="container">
+
 <div class="form-header">
+
 <h1>婚活 自己開示QA Part2</h1>
+
 <p class="form-description">
 本アンケートは、婚活・交際前の自己開示を目的としています。<br>
-プライバシー保護：LINE IDはハッシュ化（暗号化）して保存されます。<br>
-再回答について：同じLINEアカウントから回答された場合、以前の内容は上書きされます。
+プライバシー保護: LINE IDはハッシュ化 (暗号化) して保存されます。表示名・プロフィール画像・メールアドレスなどは取得されません。<br>
+再回答について: 同じLINEアカウントから回答された場合、以前の内容は上書きされます。
 </p>
+
 </div>
 
-<label>Q1 タイムスリップができるなら過去と未来どちらに行きたいですか？</label>
-<label><input type="radio" name="q1" value="past">過去</label>
-<label><input type="radio" name="q1" value="future">未来</label>
+<!-- Q1 -->
 
-<label>Q2 子どもの頃、兄弟げんかや親子げんかはする方でしたか？</label>
-<label><input type="radio" name="q2" value="a2-1">毎日のようにしていた、時々手が出ることもあった</label>
-<label><input type="radio" name="q2" value="a2-2">毎日のようにしていたが口喧嘩のみ</label>
-<label><input type="radio" name="q2" value="a2-3">たまにしていた、時々手が出ることもあった</label>
-<label><input type="radio" name="q2" value="a2-4">たまにしていたが口喧嘩のみ</label>
-<label><input type="radio" name="q2" value="a2-5">年に1〜2回程度していた</label>
-<label><input type="radio" name="q2" value="a2-6">喧嘩した記憶がない、ほとんどない</label>
+<label>Q1 タイムスリップができるなら過去と未来どちらに行きたいですか?</label>
 
-<label>Q3 1年後までに個人的にしたいことはありますか？</label>
+<label>
+<input type="radio" name="q1" value="past">
+過去
+</label>
+
+<label>
+<input type="radio" name="q1" value="future">
+未来
+</label>
+
+<!-- Q2 -->
+
+<label>Q2 子どもの頃、兄弟げんかや親子げんかはする方でしたか?</label>
+
+<label>
+<input type="radio" name="q2" value="a2-1">
+毎日のようにしていた、時々手が出ることもあった
+</label>
+
+<label>
+<input type="radio" name="q2" value="a2-2">
+毎日のようにしていたが口喧嘩のみ
+</label>
+
+<label>
+<input type="radio" name="q2" value="a2-3">
+たまにしていた、時々手が出ることもあった
+</label>
+
+<label>
+<input type="radio" name="q2" value="a2-4">
+たまにしていたが口喧嘩のみ
+</label>
+
+<label>
+<input type="radio" name="q2" value="a2-5">
+年に1~2回程度していた
+</label>
+
+<label>
+<input type="radio" name="q2" value="a2-6">
+喧嘩した記憶がない、ほとんどない
+</label>
+
+<!-- Q3 -->
+
+<label>
+Q3 1年後までに個人的にしたいことはありますか?
+</label>
+
 <textarea id="q3"></textarea>
 
-<label>Q4 5年後までに個人的にしたいことはありますか？</label>
+<!-- Q4 -->
+
+<label>
+Q4 5年後までに個人的にしたいことはありますか?
+</label>
+
 <textarea id="q4"></textarea>
 
-<label>Q5 定年退職後ぐらいの年齢で個人的にしたいことはありますか？</label>
+<!-- Q5 -->
+
+<label>
+Q5 定年退職後ぐらいの年齢で個人的にしたいことはありますか?
+</label>
+
 <textarea id="q5"></textarea>
 
-<label>Q6 もし宝くじ3億円が当たったらどうしますか？</label>
-<label><input type="radio" name="q6" value="a6-1">仕事をやめる（セミFIRE含む）</label>
-<label><input type="radio" name="q6" value="a6-2">大きな金額のものを買う</label>
-<label><input type="radio" name="q6" value="a6-3">すぐには生活を変えずに貯めておく</label>
-<label><input type="radio" name="q6" value="a6-4">寄付する</label>
+<!-- Q6 -->
 
-<label>Q7 支出を削ってもよい順番を選択してください（タップ順で順位付け）</label>
+<label>
+Q6 もし宝くじ3億円が当たったらどうしますか? 次の選択肢の中で選んでください。
+</label>
+
+<label>
+<input type="radio" name="q6" value="a6-1">
+仕事をやめ(セミFIRE含む) 当選金額で生活する
+</label>
+
+<label>
+<input type="radio" name="q6" value="a6-2">
+大きな金額のものを買う
+</label>
+
+<label>
+<input type="radio" name="q6" value="a6-3">
+すぐには生活を変えずに貯めておく
+</label>
+
+<label>
+<input type="radio" name="q6" value="a6-4">
+寄付する
+</label>
+
+<!-- Q7 -->
+
+<label>
+Q7 業績不振により給料が減ることになってしまいました。次の中で支出を削ってもいいと思う順番を教えてください。<br>
+転職など給料を上げる形での解決策は考えずに、お答えください。ただし引越しなど実際にはすぐには実行できない、一時的にむしろ支出が増えるものもありますが、ここではそれも考慮せずにあくまで優先順位を単純に答えてください。<br>
+（タップした順番が順位になります）
+</label>
+
 <div id="q7Ranking" class="ranking-group">
-<button type="button" class="rank-option" data-value="家賃"><span class="rank-number"></span>家賃</button>
-<button type="button" class="rank-option" data-value="食費"><span class="rank-number"></span>食費</button>
-<button type="button" class="rank-option" data-value="会社飲み"><span class="rank-number"></span>会社での飲み会代</button>
-<button type="button" class="rank-option" data-value="友人飲み"><span class="rank-number"></span>友人との食事代・飲み会代</button>
-<button type="button" class="rank-option" data-value="旅行"><span class="rank-number"></span>旅行代</button>
-<button type="button" class="rank-option" data-value="プレゼント"><span class="rank-number"></span>プレゼント代</button>
-<button type="button" class="rank-option" data-value="美容"><span class="rank-number"></span>衣服や美容にかけるお金</button>
-<button type="button" class="rank-option" data-value="サブスク"><span class="rank-number"></span>動画配信などのサブスク代</button>
-<button type="button" class="rank-option" data-value="趣味"><span class="rank-number"></span>その他趣味に使うお金</button>
-<button type="button" class="rank-option" data-value="その他"><span class="rank-number"></span>その他</button>
+
+<button type="button" class="rank-option" data-value="家賃">
+<span class="rank-number"></span>
+家賃
+</button>
+
+<button type="button" class="rank-option" data-value="食費">
+<span class="rank-number"></span>
+食費
+</button>
+
+<button type="button" class="rank-option" data-value="会社での飲み会代">
+<span class="rank-number"></span>
+会社での飲み会代
+</button>
+
+<button type="button" class="rank-option" data-value="友人との食事代、飲み会代">
+<span class="rank-number"></span>
+友人との食事代、飲み会代
+</button>
+
+<button type="button" class="rank-option" data-value="旅行代">
+<span class="rank-number"></span>
+旅行代
+</button>
+
+<button type="button" class="rank-option" data-value="プレゼント代">
+<span class="rank-number"></span>
+プレゼント代
+</button>
+
+<button type="button" class="rank-option" data-value="衣服や美容にかけるお金">
+<span class="rank-number"></span>
+衣服や美容にかけるお金
+</button>
+
+<button type="button" class="rank-option" data-value="動画配信などのサブスク代">
+<span class="rank-number"></span>
+動画配信などのサブスク代
+</button>
+
+<button type="button" class="rank-option" data-value="その他趣味に使うお金">
+<span class="rank-number"></span>
+その他趣味に使うお金
+</button>
+
+<button type="button" class="rank-option" data-value="その他">
+<span class="rank-number"></span>
+その他
+</button>
+
 </div>
 
-<label>Q8 愛情表現について嬉しい順に選択してください（タップ順で順位付け）</label>
+<!-- Q8 -->
+
+<label>
+Q8 次の愛情表現について、嬉しい順に選択してください。<br>
+（タップした順番が順位になります）
+</label>
+
 <div id="q8Ranking" class="ranking-group">
-<button type="button" class="rank-option" data-value="会う"><span class="rank-number"></span>会う頻度や時間が多い</button>
-<button type="button" class="rank-option" data-value="連絡"><span class="rank-number"></span>連絡頻度が多い</button>
-<button type="button" class="rank-option" data-value="プレゼント"><span class="rank-number"></span>プレゼント</button>
-<button type="button" class="rank-option" data-value="労力"><span class="rank-number"></span>私のために労力をかけてくれる</button>
-<button type="button" class="rank-option" data-value="配慮"><span class="rank-number"></span>私の嫌がることをしないでいてくれる</button>
+
+<button type="button" class="rank-option" data-value="会う頻度や時間が多い">
+<span class="rank-number"></span>
+会う頻度や時間が多い
+</button>
+
+<button type="button" class="rank-option" data-value="連絡頻度が多い">
+<span class="rank-number"></span>
+連絡頻度が多い
+</button>
+
+<button type="button" class="rank-option" data-value="プレゼント">
+<span class="rank-number"></span>
+プレゼント
+</button>
+
+<button type="button" class="rank-option" data-value="私のために労力をかけてくれる">
+<span class="rank-number"></span>
+私のために労力をかけてくれる
+</button>
+
+<button type="button" class="rank-option" data-value="私の嫌がることをしないでいてくれる">
+<span class="rank-number"></span>
+私の嫌がることをしないでいてくれる
+</button>
+
 </div>
 
 <div class="button-group">
-<button id="submitBtn" type="button">送信</button>
+
+<button id="submitBtn" type="button">
+送信
+</button>
+
 <div class="sub-buttons">
-<button id="draftBtn" type="button">下書き保存</button>
-<button id="clearBtn" type="button">フォームクリア</button>
-</div>
+
+<button id="draftBtn" type="button">
+下書き保存
+</button>
+
+<button id="clearBtn" type="button">
+フォームクリア
+</button>
+
 </div>
 
-<div id="shareModal" class="modal">
-<div class="modal-content">
-<h3>共有</h3>
-<input id="shareName" placeholder="共有名（任意）">
-<button id="shareBtn">共有する</button>
 </div>
+
+<!-- 共有モーダル -->
+
+<div id="shareModal" class="modal">
+
+<div class="modal-content">
+
+<h3>共有</h3>
+
+<input
+id="shareName"
+placeholder="共有名(任意)"
+>
+
+<button id="shareBtn">
+共有する
+</button>
+
+</div>
+
 </div>
 
 <script src="app.js"></script>
+
 </div>
+
 </body>
 </html>
