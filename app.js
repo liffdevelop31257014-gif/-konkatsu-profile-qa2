@@ -393,46 +393,51 @@ function renderViewMode(data, options = {}) {
   const container = document.getElementById("viewMode");
   container.style.display = "block";
   container.innerHTML = `
-    <div class="view-header">
-      <p class="view-label">回答内容</p>
-      ${data._shareName ? `<p class="view-name">${escapeHTML(data._shareName)} さんの回答</p>` : ""}
-    </div>
-    ${rows.map(({ q, a, html }) => `
-      <div class="view-item">
-        <p class="view-question">${escapeHTML(q)}</p>
-        <p class="view-answer">${html ? html : escapeHTML(a).replace(/\n/g, "<br>")}</p>
-      </div>
-    `).join("")}
+   ${selfPreview ? `
+   <div class="cta-card share-confirm-card">
+     <div class="cta-content" style="text-align:center;">
+       <h3 class="cta-title">この内容を共有します</h3>
+       <p class="cta-text">
+         内容を確認したら、共有先を選んでください。
+       </p>
+       <button type="button" id="goShareBtn" class="cta-button">
+         共有先を選ぶ <span class="cta-arrow">›</span>
+       </button>
+     </div>
+   </div>
+   ` : ""}
 
-    ${selfPreview ? `
-    <div class="cta-card share-confirm-card">
-      <div class="cta-content" style="text-align:center;">
-        <h3 class="cta-title">この内容を共有します</h3>
-        <p class="cta-text">
-          内容を確認したら、共有先を選んでください。
-        </p>
-        <button type="button" id="goShareBtn" class="cta-button">
-          共有先を選ぶ <span class="cta-arrow">›</span>
-        </button>
-      </div>
-    </div>
-    ` : `
-    <div class="cta-card">
-      <img src="image1.PNG" class="cta-image-left" alt="">
-      <div class="cta-content">
-        <h3 class="cta-title">あなたの価値観も共有してみませんか？</h3>
-        <p class="cta-text">
-          婚活・交際前の自己開示は、<br>
-          お互いを知る大切なきっかけになります。<br>
-          あなたの考えや価値観をアンケートで伝えてみましょう。
-        </p>
-        <button type="button" id="ctaButton" class="cta-button" data-href="${formURL}">
-          私も回答する <span class="cta-arrow">›</span>
-        </button>
-      </div>
-    </div>
-    `}
-  `;
+   ${!selfPreview ? `
+   <div class="view-header">
+   <p class="view-label">回答内容</p>
+    ${data._shareName ? `<p class="view-name">${escapeHTML(data._shareName)} さんの回答</p>` : ""}
+   </div>
+   ` : ""}
+
+   ${rows.map(({ q, a, slider }) => `
+     <div class="view-item">
+       <p class="view-question">${escapeHTML(q)}</p>
+       ${slider ? slider : `<p class="view-answer">${escapeHTML(a).replace(/\n/g, "<br>")}</p>`}
+     </div>
+   `).join("")}
+
+   ${!selfPreview ? `
+   <div class="cta-card">
+     <img src="image1.PNG" class="cta-image-left" alt="">
+     <div class="cta-content">
+       <h3 class="cta-title">あなたの価値観も共有してみませんか？</h3>
+       <p class="cta-text">
+         婚活・交際前の自己開示は、<br>
+         お互いを知る大切なきっかけになります。<br>
+         あなたの考えや価値観をアンケートで伝えてみましょう。
+       </p>
+       <button type="button" id="ctaButton" class="cta-button" data-href="${formURL}">
+         私も回答する <span class="cta-arrow">›</span>
+       </button>
+     </div>
+   </div>
+   ` : ""}
+`;
 
   if (selfPreview) {
     const goShareBtn = document.getElementById("goShareBtn");
