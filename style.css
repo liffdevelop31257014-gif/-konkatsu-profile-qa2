@@ -278,6 +278,11 @@ label:has(input[type="radio"]){
   cursor:pointer;
 }
 
+.share-confirm-card{
+ margin-top:0;
+ margin-bottom:12px;
+}
+
 /********************************
  * スマホ最適化
  ********************************/
