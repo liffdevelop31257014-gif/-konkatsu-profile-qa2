@@ -244,7 +244,7 @@ function validate(data) {
   if (!data.q1)        errors.push("Q1: 過去・未来どちらに行きたいか選択してください。");
   if (!data.q2)        errors.push("Q2: 喧嘩の頻度を選択してください。");
   if (!data.q3)        errors.push("Q3: 旅行の計画について選択してください。");
-  if (!data.q4.trim()) errors.push("Q4: 人生が充実している瞬間について入力してください。");
+  if (!data.q4.trim()) errors.push("Q4: どんな状態が続くとメンタルや体調を崩しやすくなるかについて入力してください。");
   if (!data.q5.trim()) errors.push("Q5: 1年後までにしたいことを入力してください。");
   if (!data.q6.trim()) errors.push("Q6: 5年後までにしたいことを入力してください。");
   if (!data.q7.trim()) errors.push("Q7: 定年退職後にしたいことを入力してください。");
@@ -375,7 +375,7 @@ function renderViewMode(data, options = {}) {
       a: q2Labels[data.q2] || "未回答" },
     { q: "Q3 旅行は計画立てて行くのが好きですか？行き当たりばったりがいいですか？",
       a: q3Labels[data.q3] || "未回答" },
-    { q: "Q4「人生が充実している、幸せだ」と感じる瞬間はどんな場面ですか？",
+    { q: "Q4 どんな状態が続くとメンタルや体調を崩しやすくなりますか？",
       a: data.q4 || "未回答" },
     { q: "Q5 1年後までに個人的にしたいことはありますか？", a: data.q5 || "未回答" },
     { q: "Q6 5年後までに個人的にしたいことはありますか？", a: data.q6 || "未回答" },
