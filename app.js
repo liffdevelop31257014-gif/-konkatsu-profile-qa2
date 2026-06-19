@@ -299,7 +299,7 @@ function validate(data) {
   const q12Total = document.querySelectorAll("#q12Ranking .rank-option").length;
 
   if (data.q9.length  < q9Total)  errors.push("Q9: すべての選択肢を順位付けしてください。");
-  if (!data.q10.trim())           errors.push("Q10: 苦手な行動や状況について入力してください。");
+  if (!data.q10.trim())           errors.push("Q10: 苦手な状況や言動について入力してください。");
   if (data.q11.length < q11Total) errors.push("Q11: すべての選択肢を順位付けしてください。");
   if (data.q12.length < q12Total) errors.push("Q12: すべての選択肢を順位付けしてください。");
 
@@ -436,7 +436,7 @@ function renderViewMode(data, options = {}) {
       a: q8Labels[data.q8] || "未回答" },
     { q: "Q9 業績不振により給料が減ることになった場合、支出を削ってもいいと思う順番",
       html: rankingListHTML(data.q9) },
-    { q: "Q10 どうしても「これだけは苦手（または生理的に受け付けない）」という行動や状況はありますか？",
+    { q: "Q10 これだけは苦手または生理的に受け付けないというシチュエーションや他人の言動はありますか？",
       a: data.q10 || "未回答" },
     { q: "Q11 次の愛情表現について、嬉しい順",
       html: rankingListHTML(data.q11) },
